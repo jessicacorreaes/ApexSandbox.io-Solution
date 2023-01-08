@@ -1,15 +1,15 @@
 public String whichTwo(Integer a, Integer b, Integer c) {
     String result = ' ';
     if((a+b) == c){
-        result = String.valueOf(c);
+        result = 'c';
         return result;
     }
     if((a+c) == b){
-        result = String.valueOf(b);
+        result = 'b';
         return result;
     }
     if(b+c == a){
-        result = String.valueOf(a);
+        result = 'a';
         return result;
     }
     return result;
