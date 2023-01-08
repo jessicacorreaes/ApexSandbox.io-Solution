@@ -7,7 +7,7 @@ public String aOrAn(String word) {
     artigo.startsWith('u') ||
     ){
         return 'an' + '' + artigo;
-    }else{
-        return 'a' + '' + artigo;
     }
+        return 'a' + '' + artigo;
+    
 }
