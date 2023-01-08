@@ -3,5 +3,5 @@ public Integer sumToN(Integer n) {
     for (Integer num = 1; num < n; num++){
         soma += num;
     }
-    result soma;      
+    return soma;      
 }
