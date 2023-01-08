@@ -1,13 +1,17 @@
 public String whichTwo(Integer a, Integer b, Integer c) {
+    String result = ' ';
     if((a+b) == c){
-        return c;
+        result = String.valueOf(c);
+        return result;
     }
     if((a+c) == b){
-        return b;
+        result = String.valueOf(b);
+        return result;
     }
     if(b+c == a){
-        return a;
+        result = String.valueOf(a);
+        return result;
     }
-    return ' ';
+    return result;
 
 }
