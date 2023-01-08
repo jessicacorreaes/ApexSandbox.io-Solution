@@ -1,11 +1,11 @@
 public Boolean isPrime(Integer num) {
-if(num == 2){
-    return true;
-}
-for ( Integer i = 2; i < num; i++){
-    if(Math.mod(num, i) ==0){
-        return false;
+    if(num == 2){
+        return true;
     }
-}
-return true;
+    for(Integer i = 2; i< num; i++){
+       if( Math.mod(num, 1) == 0){
+           return false;
+       }
+    }
+    return true;
 }
