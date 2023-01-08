@@ -6,8 +6,8 @@ public String aOrAn(String word) {
     artigo.startsWith('o') ||
     artigo.startsWith('u') ||
     ){
-        return 'an' + ' ' + artigo;
+        return 'an' + '' + artigo;
     }else{
-        return 'a' + ' ' + artigo;
+        return 'a' + '' + artigo;
     }
 }
