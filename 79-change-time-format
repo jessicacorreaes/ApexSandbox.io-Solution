@@ -14,5 +14,5 @@ String[] time = strTime.split(':');
         hours -= 12;
         am_pm = 'PM';
     }
-    return String.format('%02d:%s %s', hours, minutes, am_pm);
+    return String.format('%02d:%s %s', hours, minutes, 'AM');
 }
