@@ -1,14 +1,16 @@
 public Id insertCourse(String name, String details, Integer credits) {
    apxio__Course__c curso = new apxio__Course__c();
 
+   if(credits < 1 || credits > 4){
+       return null;
+   }
+
    curso.Name = name;
    curso.apxio__Course_Details__c = details;
-   if(credits == 1 || credits == 2 || credits == 3 || credits == 4 ){
    curso.apxio__Credits__c = String.ValueOf(credits);
+   
    insert curso;
    return curso.Id;
-   }else{
-   return null;
-   }
+
 
 }
