@@ -4,13 +4,13 @@ String[] time = strTime.split(':');
     Integer minutes = Integer.valueOf(time[1]);
     String sufixo = ' AM';
 
-   if (horas == 12) sufixo = ' PM';
-    if (horas > 12) { 
+   if (hours == 12) sufixo = ' PM';
+    if (hours > 12) { 
         sufixo = ' PM';
-        horas -= 12;
+        hours -= 12;
     }
-    if (horas == 0) {
-        horas = 12;
+    if (hours == 0) {
+        hours = 12;
     }
 
     String strhoras = String.valueOf(horas);
