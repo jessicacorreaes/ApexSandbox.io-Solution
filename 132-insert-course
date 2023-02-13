@@ -5,12 +5,13 @@ public Id insertCourse(String name, String details, Integer credits) {
    curso.apxio__Course_Details__c = details;
    if(credits == 1 || credits == 2 || credits == 3 || credits == 4 ){
    curso.apxio__Credits__c = String.ValueOf(credits);
+   insert curso;
+   return curso.Id;
    }else{
-   curso.apxio__Credits__c = null;
+   return null;
    }
    
 
 
-   insert curso;
-   return curso.Id;
+
 }
