@@ -6,5 +6,6 @@ public String formatName(String firstName, String lastName) {
     }else if(String.IsBlank(firstName) && String.IsBlank(lastName) == true){
         return firstName;
     }
+    return '';
     
 }
