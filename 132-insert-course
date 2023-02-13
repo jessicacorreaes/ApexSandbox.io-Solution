@@ -1,8 +1,8 @@
 public Id insertCourse(String name, String details, Integer credits) {
    apxio__Course__c curso = new apxio__Course__c();
 
-    if((String.isBlank(name) == true) && (String.isBlank(details) == true)
-    &&(String.isBlank(credits) == true) ){
+    if((String.isBlank(name) == false) && (String.isBlank(details) == false)
+    &&(String.isBlank(credits) == false) ){
     curso.Name = name;
     curso.apxio__Course_Details__c = details;
     curso.apxio__Credits__c = String.ValueOf(credits);
