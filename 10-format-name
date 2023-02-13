@@ -1,5 +1,5 @@
 public String formatName(String firstName, String lastName) {
-    if(String.IsBlank(firstName) && String.IsBlank(lastName)){
+    if(String.IsBlank(firstName) == true && String.IsBlank(lastName) == true){
         return lastName + ', ' + firstName;
     }else if(String.IsBlank(firstName) == true && String.IsBlank(lastName)) {
         return lastName;
