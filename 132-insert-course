@@ -1,0 +1,10 @@
+public Id insertCourse(String name, String details, Integer credits) {
+   apxio__Course__c curso = new apxio__Course__c();
+
+   curso.Name = name;
+   curso.apxio__Course_Details__c = details;
+   curso.apxio__Credits__c = credits;
+
+   insert curso;
+   return curso.Id;
+}
