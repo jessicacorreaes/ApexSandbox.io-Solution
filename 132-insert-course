@@ -3,7 +3,7 @@ public Id insertCourse(String name, String details, Integer credits) {
 
    curso.Name = name;
    curso.apxio__Course_Details__c = details;
-   curso.apxio__Credits__c = credits;
+   curso.apxio__Credits__c = String.ValueOf(credits);
 
    insert curso;
    return curso.Id;
