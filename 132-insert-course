@@ -3,7 +3,7 @@ public Id insertCourse(String name, String details, Integer credits) {
 
    curso.Name = name;
    curso.apxio__Course_Details__c = details;
-   if(credtis == 1 || credtis == 2 || credtis == 3 || credtis == 4 || credtis == 0){
+   if(credits == 1 || credits == 2 || credits == 3 || credits == 4 || credits == 0){
    curso.apxio__Credits__c = String.ValueOf(credits);
    }
    curso.apxio__Credits__c = null;
