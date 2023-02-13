@@ -1,18 +1,20 @@
 public String changeTimeFormat(String strTime) {
 String[] time = strTime.split(':');
     Integer hours = Integer.valueOf(time[0]);
-    String minutes = time[1];
-    String am_pm;
-    if (hours == 0) {
-        hours = 12;
-        am_pm = 'AM';
-    } else if (hours < 12) {
-        am_pm = 'AM';
-    } else if (hours == 12) {
-        am_pm = 'PM';
-    } else {
-        hours -= 12;
-        am_pm = 'PM';
+    Integer minutes = Integer.valueOf(time[1]);
+    String sufixo = ' AM';
+
+   if (horas == 12) sufixo = ' PM';
+    if (horas > 12) { 
+        sufixo = ' PM';
+        horas -= 12;
     }
-    return String.format('%02d:%s , hours, minutes, 'AM');
+    if (horas == 0) {
+        horas = 12;
+    }
+
+    String strhoras = String.valueOf(horas);
+    if (strhoras.length() == 1) strhoras = '0' + strhoras;
+
+    return strhoras + ':' + parts[1] + sufixo;
 }
