@@ -16,5 +16,5 @@ String[] time = strTime.split(':');
     String strhoras = String.valueOf(horas);
     if (strhoras.length() == 1) strhoras = '0' + strhoras;
 
-    return strhoras + ':' + parts[1] + sufixo;
+    return strhoras + ':' + time[1] + sufixo;
 }
