@@ -1,12 +1,14 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
-    try {
-    return accounts;
-
-} catch(AccountException e) {
-    return(e.getMessage());
-}
-}
+    if (accounts == null) {
+        throw new IllegalArgumentException('accounts should not be null');
+    }
+    
+    for (Account account : accounts) {
+        if (account.BillingCity == null) {
+            throw new AccountException('BillingCity is missing for account: ' + account.Name);
+        }
+    }
    
 }
 
