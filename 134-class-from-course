@@ -5,14 +5,13 @@ public Id classFromCourse(String courseName) {
 
     insert curso;
 
-    List<apxio__Course__c> cursos = [SELECT Id, Name (SELECT Name From apxio__Class__c) 
+    List<apxio__Course__c> cursos = [SELECT Id, Name 
                                     FROM apxio__Course__c 
-                                    WHERE apxio__Class__c.Name = apxio__Course__c.Name];
+                                    WHERE apxio__Course__c.Name := courseName];
 
     if(cursos.Id[1] != null){
         return cursos.Id;
     }
     return null;
-
 
 }
