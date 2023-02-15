@@ -1,7 +1,7 @@
 public Id classFromCourse(String courseName) {
     
 
-    List<apxio__Course__c> cursos = [SELECT Id, Name 
+    List<apxio__Course__c> cursos = [SELECT Id, 
                                     FROM apxio__Course__c 
                                     WHERE apxio__Course__c.Name := courseName];
 
