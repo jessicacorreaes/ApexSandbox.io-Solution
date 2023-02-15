@@ -5,7 +5,7 @@ public String divide(Integer a, Integer b){
     String result2 = String.valueOf(result);
     return result2;
         
-} catch(DmlException e) {
+} catch(Exception e) {
     return(e.getMessage());
 }
 }
