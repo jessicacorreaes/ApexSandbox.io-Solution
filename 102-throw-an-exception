@@ -6,9 +6,10 @@ public List<Account> checkAccounts(List<Account> accounts)
     
     for (Account account : accounts) {
         if (account.BillingCity == null) {
-            throw new AccountException('BillingCity is missing for account: ' + account.Name);
+            throw new AccountException(account.Name);
         }
     }
+    return account;
    
 }
 
