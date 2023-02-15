@@ -1,0 +1,8 @@
+public Boolean isTypeAccount(sObject record)
+{
+    sObject registro = record;
+    if(isTypeAccount(registro) == true){
+        return true;
+    }
+    return false;
+}
