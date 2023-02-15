@@ -2,10 +2,10 @@ public void enrollStudents(List<String> emails, String className) {
     
     List<apxio__Student__c> alunos = [SELECT Id, Name, apxio__Email__c 
                                     FROM apxio__Student__c
-                                    WHERE apxio__Email__c IN :emails];
+                                    WHERE apxio__Email__c IN:emails];
 
     List<apxio__Class__c> classe = [SELECT Id, Name FROM apxio__Class__c
-                                    WHERE Name = :className];
+                                    WHERE Name =:className];
 
     
     List<apxio__Class_Enrollment__c> registros = new List<apxio__Class_Enrollment__c>();
