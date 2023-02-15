@@ -10,6 +10,7 @@ public Id classFromCourse(String courseName) {
     }
     apxio__Class__c classe = new apxio__Class__c();
     classe.Name = courseName;
+    apxio__Class__c.apxio__Course__c = cursos.Id;
 
     insert classe;
 
