@@ -11,7 +11,7 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Class_Enrollment__c> registros = new List<apxio__Class_Enrollment__c>();
 
     for(apxio__Student__c estudante : alunos){
-        apxio__Class_Enrollment__c> registro = new apxio__Class_Enrollment__c();
+        apxio__Class_Enrollment__c registro = new apxio__Class_Enrollment__c();
         registro.apxio__Student__c = estudante.Id;
         registro.apxio__Offered_Class__c = classe[0].Id;
 
