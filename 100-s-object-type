@@ -1,7 +1,8 @@
 public Boolean isTypeAccount(sObject record)
 {
+
     sObject registro = record;
-    if(isTypeAccount(registro) == true){
+    if(record != true && record.getSObjectType() == Account.sObjectType){
         return true;
     }
     return false;
