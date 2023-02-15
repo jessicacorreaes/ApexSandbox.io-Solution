@@ -9,7 +9,7 @@ public List<Account> checkAccounts(List<Account> accounts)
             throw new AccountException(account.Name);
         }
     }
-    return account;
+    return accounts;
    
 }
 
