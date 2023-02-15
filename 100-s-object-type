@@ -1,5 +1,6 @@
 public Boolean isTypeAccount(sObject record)
 {
-    Boolean result = record instanceof Account;
+
+    Boolean result = record instanceof Lead;
     return result;
 }
