@@ -1,0 +1,15 @@
+public Id classFromCourse(String courseName) {
+    
+    apxio__Class__c curso = new apxio__Class__c();
+    curso.Name = courseName;
+
+    insert curso;
+
+    List<apxio__Course__c> cursos = [SELECT Id, Name (SELECT Name From apxio__Class__c) 
+                                    FROM apxio__Course__c 
+                                    WHERE apxio__Class__c.Name = apxio__Course__c.Name];
+
+    return cursos.Id;
+
+
+}
