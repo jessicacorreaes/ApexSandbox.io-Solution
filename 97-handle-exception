@@ -1,11 +1,14 @@
 public String divide(Integer a, Integer b){
-    
+    if(a != null && b != null && b != 0){
     try {
     Integer result = a / b;
     String result2 = String.valueOf(result);
     return result2;
-        
+       
+    }else
+
 } catch(DmlException e) {
+
     return('The following exception has occurred: ' + e.getMessage());
 }
 }
