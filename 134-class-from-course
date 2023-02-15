@@ -9,7 +9,10 @@ public Id classFromCourse(String courseName) {
                                     FROM apxio__Course__c 
                                     WHERE apxio__Class__c.Name = apxio__Course__c.Name];
 
-    return cursos.Id;
+    if(cursos.Id[1] != null){
+        return cursos.Id;
+    }
+    return null;
 
 
 }
