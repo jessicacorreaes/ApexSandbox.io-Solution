@@ -3,7 +3,7 @@ public Id classFromCourse(String courseName) {
 
     List<apxio__Course__c> cursos = [SELECT Id, 
                                     FROM apxio__Course__c 
-                                    WHERE Name := courseName];
+                                    WHERE Name =: courseName];
 
     if(cursos.size() == 0){
         return null;
