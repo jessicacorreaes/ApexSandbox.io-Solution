@@ -1,4 +1,4 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
-  String s = (String)JSON.deserialize(accounts);
+  String s = JSON.deserialize(accounts);
   return s;
 }
