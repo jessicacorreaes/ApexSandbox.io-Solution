@@ -14,19 +14,19 @@ public List<Account> getAccounts(List<Account> accounts) {
     }
     return accounts;
 }
-
 // write extra class here 
 public class AccountWrapper implements Comparable {
+    public Account acc; 
 
-    public Account account {get;set;}
-
-    public AccountWrapper(Account a){
-        this.a = a;
+    public AccountWrapper(Account acc) {
+        this.acc = acc;
     }
 
-    public Integer compareTo(Object compareTo){
-        AccountWrapper outraConta = (AccountWrapper)compareTo;
-        if(outraConta.a.AnnualRevenue > this.a.AnnualRevenue) return 1;
+    public Integer compareTo(Object compareTo) {
+        //cast compareTo object to AccountWrapper
+        AccountWrapper aw = (AccountWrapper)compareTo;
+        //compare the AnnualRevenue
+        if(aw.acc.AnnualRevenue > this.acc.AnnualRevenue) return 1;
         return -1;
     }
 }
