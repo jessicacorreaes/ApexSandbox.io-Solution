@@ -1,14 +1,18 @@
 public List<Account> getAccounts(List<Account> accounts) {
-    List<Account> novaLista = new List<Account>();
-
-    for(Account conta: accounts){
-    AccountWrapper.compareTo(conta);
-    novaLista.add(conta);
+    if(accounts == null) return null;
+    List<AccountWrapper> accList = new List<AccountWrapper>();
+    //Convert List<Account> to List<AccountWrapper>
+    for(Account acc : accounts) {
+        accList.add(new AccountWrapper(acc));
     }
-    
-    return novaLista;
-
-
+    //this will invoke AccountWrapper.compareTo()
+    accList.sort();
+    //convert List<AccountWrapper> back to List<Account>
+    for(Integer i=0; i<accounts.size(); i++) {
+        accounts[i] = accList[i].acc;
+    }
+    return accounts;
+}
 }
 // write extra class here 
 public class AccountWrapper implements Comparable {
@@ -16,10 +20,12 @@ public class AccountWrapper implements Comparable {
     public Account account {get;set;}
 
     public AccountWrapper(Account a){
-        account = a;
+        this.a = a;
     }
 
-    public List<Account> compareTo(Object compareTo){
+    public Integer compareTo(Object compareTo){
         AccountWrapper outraConta = (AccountWrapper)compareTo;
+        if(outraConta.a.AnnualRevenue > this.a.AnnualRevenue) return 1;
+        return -1;
     }
 }
