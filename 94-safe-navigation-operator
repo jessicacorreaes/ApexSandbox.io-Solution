@@ -1,0 +1,6 @@
+public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
+//Este exemplo primeiro avaliaa, e retorna nulo seaé nulo. Caso contrário, o valor de retorno éab
+//a?.b // Evaluates to: a == null ? null : a.b
+
+return accounts[0]?.BillingCity?.toUpperCase();
+}
