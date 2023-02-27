@@ -1,0 +1,25 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    List<Account> novaLista = new List<Account>();
+
+    for(Account conta: accounts){
+    AccountWrapper.compareTo(conta);
+    novaLista.add(conta);
+    }
+    
+    return novaLista;
+
+
+}
+// write extra class here 
+public with sharing class AccountWrapper implements Comparable {
+
+    public Account account {get;set;}
+
+    public AccountWrapper(Account a){
+        account = a;
+    }
+
+    public List<Account> compareTo(Object compareTo){
+        AccountWrapper outraConta = (AccountWrapper)compareTo;
+    }
+}
