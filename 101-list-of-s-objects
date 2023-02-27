@@ -3,10 +3,10 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
     List<sObject> s = new List<sObject>();
 
     for(Account account : accounts){
-        s.addAll(account);
+        s.add(account);
     }
     for(Contact contact : contacts){
-        s.addAll(contact)
+        s.add(contact)
     }
 
     return s;
