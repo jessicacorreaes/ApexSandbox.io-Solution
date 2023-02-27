@@ -3,10 +3,10 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
     List<sObject> s = new List<sObject>();
 
 if(accounts != null){
-    s.add(accounts);
+    s.addAll(accounts);
 }
 if(contacts != null){
-    s.add(contacts);
+    s.addAll(contacts);
 }
 
     return s;
