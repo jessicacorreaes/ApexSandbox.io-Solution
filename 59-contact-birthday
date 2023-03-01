@@ -8,8 +8,10 @@ public Boolean isBirthday(Contact c) {
 
     if(dayContato == dayHoje && mesContato == mesHoje){
         return true;
-    }
+    }else{
     return false;
+    }
+    
 
 
 }
