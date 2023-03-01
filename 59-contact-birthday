@@ -1,10 +1,10 @@
 public Boolean isBirthday(Contact c) {
 
-    String dayContato = c.Birthdate.day();
-    String mesContato = c.Birthdate.month();
+    Integer dayContato = c.Birthdate.day();
+    Integer mesContato = c.Birthdate.month();
 
-    String dayHoje = System.today().day();
-    String mesHoje = System.today().month();
+    Integer dayHoje = System.today().day();
+    Integer mesHoje = System.today().month();
 
     if(dayContato == dayHoje && mesContato == mesHoje){
         return true;
