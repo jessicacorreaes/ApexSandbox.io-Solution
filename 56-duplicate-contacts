@@ -1,0 +1,8 @@
+public Boolean duplicateContacts(Contact c1, Contact c2) {
+    if(String.isBlanlk(c1) && String.isBlanlk(c2)){
+        if(c1.Email != c2.Email || c2.Phone != c2.Phone){
+            return true;
+        }
+        return false;
+    }
+}
