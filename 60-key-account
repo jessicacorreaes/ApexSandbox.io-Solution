@@ -24,10 +24,10 @@ public Boolean isKeyAccount(Account a) {
           return a.AnnualRevenue >= 800000;  
         }
         when 'Retail'{
-          return a.AnnualRevenue >= 600000;  
+          return a.AnnualRevenue >= 2000000;  
         }
         when else{
-          return a.AnnualRevenue >= 2000000;  
+          return a.AnnualRevenue == 500000;  
         }
     }
     
