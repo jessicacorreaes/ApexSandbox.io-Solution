@@ -11,5 +11,12 @@ public Boolean isBirthday(Contact c) {
     }
     return false;
 
+    //if(c.Birthdate.day() == System.today().day() && c.Birthdate.month() == System.today().month()){
+    //return true;
+    //}
+    //return false;
+
+}
+
 
 }
