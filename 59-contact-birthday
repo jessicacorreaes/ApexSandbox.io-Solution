@@ -1,17 +1,9 @@
 public Boolean isBirthday(Contact c) {
 
-    date dayContato = c.Birthdate.day();
-    date mesContato = c.Birthdate.month();
-
-    date dayHoje = System.today().day();
-    date mesHoje = System.today().month();
-
-    if(dayContato == dayHoje && mesContato == mesHoje){
+    if(c.Birthdate.day() == System.today().day() && c.Birthdate.month() == System.today().month()){
         return true;
-    }else{
-    return false;
     }
-    
+    return false;
 
 
 }
